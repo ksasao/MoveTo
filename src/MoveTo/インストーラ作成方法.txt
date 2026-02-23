@@ -17,14 +17,14 @@ Windows 10 / Visual Studio 2026 対応
 3. [WiX] SendTo ショートカットの作成
   1. SetupWix\Product.wxs に SendTo 用の SpecialFolder を追加
   2. MoveTo.exe の Component に Shortcut を追加し、"フォルダーとして移動" の名前を指定
-  3. MoveTo.exe に movetonewfolder.ico が埋め込まれているため、WiX 側での Icon 指定は不要
 
 4. ビルド
-  1. PowerShell でリポジトリ直下に移動し、以下を実行
-     wix build .\SetupWix\Product.wxs -o .\SetupWix\MoveTo.msi -d SourceDir=.\MoveTo\bin\Release
+  1. PowerShell でsrc\SetupWixに移動し、以下を実行
+     mkdir .\SetupWix\installer -Force
+     wix build .\SetupWix\Product.wxs -o .\SetupWix\installer\MoveTo.msi -d SourceDir=.\MoveTo\bin\Release
 
 5. インストーラーのテスト
-  1. SetupWix フォルダーに MoveTo.msi が生成されていることを確認
+  1. SetupWix\installer フォルダーに MoveTo.msi が生成されていることを確認
   2. MoveTo.msi をダブルクリックしてインストーラーを起動
   3. エクスプローラーで任意のファイルを選択し、SHIFT キーを押しながら右クリックして "送る" メニューを表示
   4. "フォルダーとして移動" を選択し、正常に動作することを確認

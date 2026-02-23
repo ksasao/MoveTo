@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11512.155 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoveTo", "MoveTo\MoveTo.csproj", "{7F64420E-E904-41FA-9EEB-23D790CEDFEA}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupMoveTo", "SetupMoveTo\SetupMoveTo.vdproj", "{CADE08B7-0FA8-476D-887D-8F4314B18670}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,12 +25,6 @@ Global
 		{7F64420E-E904-41FA-9EEB-23D790CEDFEA}.Release|Mixed Platforms.Build.0 = Release|x86
 		{7F64420E-E904-41FA-9EEB-23D790CEDFEA}.Release|x86.ActiveCfg = Release|x86
 		{7F64420E-E904-41FA-9EEB-23D790CEDFEA}.Release|x86.Build.0 = Release|x86
-		{CADE08B7-0FA8-476D-887D-8F4314B18670}.Debug|Any CPU.ActiveCfg = Debug
-		{CADE08B7-0FA8-476D-887D-8F4314B18670}.Debug|Mixed Platforms.ActiveCfg = Debug
-		{CADE08B7-0FA8-476D-887D-8F4314B18670}.Debug|x86.ActiveCfg = Debug
-		{CADE08B7-0FA8-476D-887D-8F4314B18670}.Release|Any CPU.ActiveCfg = Release
-		{CADE08B7-0FA8-476D-887D-8F4314B18670}.Release|Mixed Platforms.ActiveCfg = Release
-		{CADE08B7-0FA8-476D-887D-8F4314B18670}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

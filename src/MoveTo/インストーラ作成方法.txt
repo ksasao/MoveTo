@@ -1,12 +1,12 @@
-﻿WiX Toolset v4 を使ったインストーラー作成手順（右クリックの"送る" にショートカットを追加）
+﻿WiX v6 を使ったインストーラー作成手順（右クリックの"送る" にショートカットを追加）
 Windows 10 / Visual Studio 2026 対応
 
 2025/03/08 ksasao
 --------------------------------------------------------------------------------------------
 
-1. WiX Toolset v4 を CLI で導入
+1. WiX v6 を CLI で導入
   1. PowerShell を開く
-  2. dotnet tool install --global wix
+  2. dotnet tool install --global wix --version 6.0.2
   3. wix --version で 6.0.2 が表示されることを確認
 
 2. WiX セットアップの作成
@@ -20,7 +20,6 @@ Windows 10 / Visual Studio 2026 対応
 
 4. ビルド
   1. PowerShell でsrc\SetupWixに移動し、以下を実行
-     mkdir .\SetupWix\installer -Force
      wix build .\SetupWix\Product.wxs -o .\SetupWix\installer\MoveTo.msi -d SourceDir=.\MoveTo\bin\Release
 
 5. インストーラーのテスト

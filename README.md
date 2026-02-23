@@ -4,6 +4,7 @@
 ## ダウンロード
 ダウンロードしたら、setup.exe を起動してインストールを行ってください。
 
+* [MoveTo_1.1.0](https://github.com/ksasao/MoveTo/releases/download/v1.1.0/MoveTo_1.1.0.zip) (2026/2/23)
 * [moveto_setup_1.0.0.zip](https://github.com/ksasao/MoveTo/files/2197941/moveto_setup_1.0.0.zip) (2018/7/16)
 
 ## 使い方

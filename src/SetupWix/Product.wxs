@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="フォルダーとして移動" Manufacturer="ksasao" Version="1.1.0" UpgradeCode="8B3D9B8F-6D8D-4D6C-A0E7-56F3E0A3D1B2">
+    <MajorUpgrade DowngradeErrorMessage="A newer version of MoveTo is already installed." />
+    <MediaTemplate />
+    <Property Id="ARPPRODUCTICON" Value="MoveToIcon" />
+
+    <Feature Id="MainFeature" Title="MoveTo" Level="1">
+      <ComponentRef Id="MoveToExeComponent" />
+      <ComponentRef Id="MoveToExeConfigComponent" />
+      <ComponentRef Id="WindowsApiCodePackComponent" />
+      <ComponentRef Id="WindowsApiCodePackShellComponent" />
+      <ComponentRef Id="WindowsApiCodePackShellExtensionsComponent" />
+    </Feature>
+  </Package>
+
+  <Fragment>
+    <Icon Id="MoveToIcon" SourceFile="$(var.SourceDir)\..\..\movetonewfolder.ico" />
+    <StandardDirectory Id="ProgramFilesFolder">
+      <Directory Id="InstallFolder" Name="MoveTo" />
+    </StandardDirectory>
+    <StandardDirectory Id="SendToFolder" />
+  </Fragment>
+
+  <Fragment>
+    <DirectoryRef Id="InstallFolder">
+      <Component Id="MoveToExeComponent" Guid="3D5F6F2F-5E27-4D59-9B9C-9D80A37F9E21">
+        <File Id="MoveToExe" Source="$(var.SourceDir)\MoveTo.exe" KeyPath="yes" />
+        <Shortcut Id="SendToShortcut"
+                  Directory="SendToFolder"
+                  Name="フォルダーとして移動"
+                  Target="[#MoveToExe]"
+                  WorkingDirectory="InstallFolder" />
+      </Component>
+      <Component Id="MoveToExeConfigComponent" Guid="CB12E0F6-8E6B-4E04-AF9B-3FE5C7E5B5E5">
+        <File Id="MoveToExeConfig" Source="$(var.SourceDir)\MoveTo.exe.config" KeyPath="yes" />
+      </Component>
+      <Component Id="WindowsApiCodePackComponent" Guid="B7A6C6C9-8AC0-4B2B-8C7D-4C4B4E75F4C8">
+        <File Id="WindowsApiCodePack" Source="$(var.SourceDir)\Microsoft.WindowsAPICodePack.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="WindowsApiCodePackShellComponent" Guid="6E14E9D3-7B67-4D66-AB39-9F1B1B020C5C">
+        <File Id="WindowsApiCodePackShell" Source="$(var.SourceDir)\Microsoft.WindowsAPICodePack.Shell.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="WindowsApiCodePackShellExtensionsComponent" Guid="9E2B88F8-3E77-4B33-9E8B-7FAE1D5C9A0B">
+        <File Id="WindowsApiCodePackShellExtensions" Source="$(var.SourceDir)\Microsoft.WindowsAPICodePack.ShellExtensions.dll" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

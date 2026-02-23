@@ -2,7 +2,7 @@
 デスクトップがすぐ散らかってしまう人のためのシンプルなツールです。
 
 ## ダウンロード
-ダウンロードしたら、setup.exe を起動してインストールを行ってください。
+ダウンロードしたら、インストーラーを起動してインストールを行ってください。
 
 * [MoveTo_1.1.0](https://github.com/ksasao/MoveTo/releases/download/v1.1.0/MoveTo_1.1.0.zip) (2026/2/23)
 * [moveto_setup_1.0.0.zip](https://github.com/ksasao/MoveTo/files/2197941/moveto_setup_1.0.0.zip) (2018/7/16)
@@ -10,7 +10,7 @@
 ## 使い方
 使い方は簡単。
 
-ファイルやフォルダを選択して右クリック＞送る＞フォルダーとして移動 を選ぶだけです。
+ファイルやフォルダを選択してSHIFT+右クリック＞送る＞フォルダーとして移動 を選ぶだけです。
 
 ![使用方法](https://user-images.githubusercontent.com/179872/42759783-2c8abdfc-8943-11e8-8c56-2782612f995e.png)
 
